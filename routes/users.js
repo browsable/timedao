@@ -1,5 +1,4 @@
-var express = require('express'),
-    router = express.Router(),
+var router = require('express').Router(),
     formidable = require('formidable'),
     fs         = require('fs-extra'),
     util       = require('util'),
@@ -20,7 +19,6 @@ router.route('/register').post(function(req, res) {
   req.checkBody('username', '2-32 character').len(2, 32);
   req.checkBody('password', '8-32 character').len(8, 32);
   var errors = req.validationErrors();
-
   if (tag === "register") {
     if (errors) {
       res.json({message: errors});
