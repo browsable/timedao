@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.route('/users/register').post(function(req, res) {
+router.route('/register').post(function(req, res) {
   var tag      = req.body.tag,
       username = req.body.username,
       email    = req.body.email,
