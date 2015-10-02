@@ -22,7 +22,7 @@ router.route('/register').post(function (req, res) {
         if (errors) {
             res.json({message: errors});
         } else {
-            res.json({success: "1", message: "wow success"});
+            res.json({success: "1", message: "wow success",tag: tag, username: username, email: email, password: password});
             //res.render('test', {tag: tag, username: username, email: email, password: password});
             console.log(tag + username + email + password);
         }
